@@ -16,8 +16,8 @@ Find locations of trees in the vegetation structure file?
 -	Shapefile for flightlines
 -	Location 6, 11, 17
 
-	Easting	Northing	Lat	lon
-6	404893.06	3284464	29.686609	-81.983
+	Easting		Northing	Lat	lon
+6	404893.06	3284464		29.686609	-81.983
 11	404534.98	3288334.43	29.721507	-81.987042
 
 Bottom left = naming for tifs etc
@@ -27,5 +27,5 @@ Process one flightline: find a few plots that are in the same flightline. Flight
 For the whole flightline, process the signals and get 3d coordinates that we can plot as a pointcloud – filter for a few locations.
 
 Discrete LiDAR: 
-tile 404000_3284000 for 6
+tile 404000_3284000 for 6              
 tile 404000_3288000 for 11
