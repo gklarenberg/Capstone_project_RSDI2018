@@ -14,7 +14,7 @@ Find locations of trees in the vegetation structure file?
 
 -	Got the shapefiles for the distributed plots: vegetation structure
 -	Shapefile for flightlines
--	Location 6, 11, 17
+-	Location 6, 11
 
 |   | Easting   | Northing   | Lat       | lon        |  
 |---|-----------|------------|-----------|------------|
