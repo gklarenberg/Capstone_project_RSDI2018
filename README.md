@@ -4,5 +4,5 @@ This repo contains notes and codes for the NEON 2018 Summer Data Institute capst
 
 Team:    
 Leticia Lee    
-Amanda Schwantes 
-Geraldine Klarenberg 
+Amanda Schwantes       
+Geraldine Klarenberg      
