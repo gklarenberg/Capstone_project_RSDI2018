@@ -1,7 +1,7 @@
-#Capstone project
-Leticia Lee
-Geraldine Klarenberg
-Amanda Schwantes
+# Capstone project
+Leticia Lee       
+Geraldine Klarenberg        
+Amanda Schwantes       
 
 ## Research project
 
