@@ -3,30 +3,22 @@ Leticia Lee
 Geraldine Klarenberg        
 Amanda Schwantes       
 
-## Research project
+## Research question
 
 Could waveform LiDAR give us extra information on vegetation structure, specifically understory and/or complexity, compared to discrete LiDAR?
-(differentiate different types of trees?) 
 
-Pick 2/3 sites at Ordway Swisher – maybe with understory.
-Get waveform LiDAR and discrete LiDAR that covers those 2/3 sites.
-Find locations of trees in the vegetation structure file?
+We used waveform LiDAR data from a relocatable site in Puerto Rico: Rio Guilarte (GUIL).
+This is an aquatic site - which is not ideal, since it wold be good to also have vegetation structure data from terrestrial.
 
--	Got the shapefiles for the distributed plots: vegetation structure
--	Shapefile for flightlines
--	Location 6, 11
+It was difficult to access the coordinates of the waveform LiDAR data, as this would still involved accessing millions of data points, which would take too long.
+We eventually accessed a random number of pulses, and determined the area it covered.
 
-|   | Easting   | Northing   | Lat       | lon        |  
-|---|-----------|------------|-----------|------------|
-|6  | 404893.06 | 3284464    | 29.686609 | -81.983    |
-|11 | 404534.98 | 3288334.43 | 29.721507 | -81.987042 |
+|       | Easting    | Northing   | Lat       | lon         |  
+|-------|------------|------------|-----------|-------------|
+|  min  |  733720    |  2011741   | 18.182115 | -66.790397  |
+|  max  |  734414    |  2011846   | 18.182988 | -66.783828 |
 
-Bottom left = naming for tifs etc
+We extracted x, y and z coordinates for all the pulse returns.
 
-Process one flightline: find a few plots that are in the same flightline. Flightline 14.
-
-For the whole flightline, process the signals and get 3d coordinates that we can plot as a pointcloud – filter for a few locations.
-
-Discrete LiDAR: 
-tile 404000_3284000 for 6              
-tile 404000_3288000 for 11
+We also obtained the discrete LiDAR data for this trajectory, using LAStools to unzip, and FUSION to calculate a DTM.
+We calculated forest density from the discrete LiDAR (vegetation > 1m).
