@@ -7,6 +7,8 @@ Amanda Schwantes
 
 Could waveform LiDAR give us extra information on vegetation structure, specifically understory and/or complexity, compared to discrete LiDAR?
 
+## Implementation
+
 We used waveform LiDAR data from a relocatable site in Puerto Rico: Rio Guilarte (GUIL).
 This is an aquatic site - which is not ideal, since it wold be good to also have vegetation structure data from terrestrial.
 
