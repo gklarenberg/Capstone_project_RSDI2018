@@ -1,0 +1,18 @@
+::change file to lastools
+cd "C:\LAStools\LAStools\bin"
+
+::unzip our 35 las files 
+laszip -i "C:\Users\Amanda Schwantes\Documents\RSDI-2018\capstone\data\Discrete\zipped\*.laz" -odir "C:\Users\Amanda Schwantes\Documents\RSDI-2018\capstone\data\Discrete\LasFiles"
+
+::create a list of las files to process called lidar_dir.txt
+cd "C:\Users\Amanda Schwantes\Documents\RSDI-2018\capstone\data\Discrete\LasFiles
+DIR /b /s *.las | findstr .las$ > lidar_dir.txt
+
+::we can create a DTM with just the classified ground points
+cd "C:\FUSION"
+TinSurfaceCreate /class:2 "C:\Users\Amanda Schwantes\Documents\RSDI-2018\capstone\data\Discrete\DTM\PR_DTM_2.dtm" 5 m m 1 19 2 2 "C:\Users\Amanda Schwantes\Documents\RSDI-2018\capstone\data\Discrete\LasFiles\lidar_dirSub.txt"
+DTM2ASCII /raster "C:\Users\Amanda Schwantes\Documents\RSDI-2018\capstone\data\Discrete\DTM\PR_DTM_2.dtm"
+
+::Create a vegetation density layer (first returns over 1-m/all first returns)
+cover /class:~7 "C:\Users\Amanda Schwantes\Documents\RSDI-2018\capstone\data\Discrete\DTM\PR_DTM_2.dtm" "C:\Users\Amanda Schwantes\Documents\RSDI-2018\capstone\data\Discrete\DTM\PR_cover_2.dtm" 1 5 M M 1 19 2 2 "C:\Users\Amanda Schwantes\Documents\RSDI-2018\capstone\data\Discrete\LasFiles\lidar_dirSub.txt"
+DTM2ASCII /raster "C:\Users\Amanda Schwantes\Documents\RSDI-2018\capstone\data\Discrete\DTM\PR_cover_2.dtm"
