@@ -1,4 +1,4 @@
-# Capstone_project_RSDI2018
+# Capstone project RSDI2018
 
 This repo contains notes and codes for the NEON 2018 Summer Data Institute capstone project.
 
